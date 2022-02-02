@@ -16,7 +16,7 @@ namespace TamrielTradeApp {
         public BrowserHelper browserHelper = new();
         public ItemList itemList = new();
         public SearchList searchList = new();
-        public System.Windows.Forms.ToolTip urlToolTip = new();
+        public ToolTip urlToolTip = new();
         public Updater updater = new();
         public Form1() {
             instance = this;
@@ -37,15 +37,14 @@ namespace TamrielTradeApp {
         }
 
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e) {
-            // Ignore clicks that are not on button cells. 
             if(e.ColumnIndex != dataGridView1.Columns["ButtonHide"].Index) {
                 return;
             }
+
             string guid = dataGridView1.Rows[e.RowIndex].Cells[dataGridView1.Columns["GUID"].Index].Value.ToString();
-            //Debug.WriteLine($"HIDE! {guid}");
             var item = itemList.GetItemWithGUID(guid);
             item.isHidden = !item.isHidden;
-            //(dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value as DataGridViewButtonCell).value;
+
             UpdateUI_ItemList();
         }
 
@@ -68,33 +67,28 @@ namespace TamrielTradeApp {
         void ParseHTML(object sender, FrameLoadFinishedEventArgs e) {
             Debug.WriteLine($"Loaded");
             Thread.Sleep(4000);
-            //ParseHTML();
-            Invoke((Action)(() => ParseHTML()));
 
+            Invoke((Action)(() => ParseHTML()));
             browserHelper.browser.Navigation.Stop();
-            Thread.Sleep(3 * 1000);
+
+            Thread.Sleep(3000);
 
             Invoke((Action)(() => NextSearch()));
         }
 
-        private void ParseHTML() {
-            //if(browserHelper.browser.MainFrame != null) {
+        void ParseHTML() {
             List<ItemInfo> list = new HtmlParser().ParseHTML(browserHelper?.browser?.MainFrame?.Html);
             itemList.AddItems(list);
-            //UpdateUI_ItemList();
-            //}
         }
 
         public void UpdateUI_ItemList(bool isUpdateList = true) {
             if(isUpdateList) {
-                //itemList.UpdateAll_IsTrash();
                 itemList.SortList();
             }
 
             dataGridView1.Rows.Clear();
 
             itemList.items.Where(it => !it.IsTrash()).Act(item => {
-
                 dataGridView1.Rows.Add(
                     item.image?.Clone(),
                     item.name,
@@ -119,36 +113,31 @@ namespace TamrielTradeApp {
             });
 
             updater.timer_updateItemList.TimerSetActive(updater.timer_updateItemList.isTimerActive, true);
-
         }
 
-        private void Form1_FormClosed(object sender, FormClosedEventArgs e) {
+        void Form1_FormClosed(object sender, FormClosedEventArgs e) {
             browserHelper.browser.Navigation.FrameLoadFinished -= ParseHTML;
             browserHelper.browser?.Dispose();
             browserHelper.engine?.Dispose();
         }
 
 
-        private void linkLabelBtn_UnHideAll_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
+        void LinkLabelBtn_UnHideAll_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
             if(itemList.items.Count(it => it.isHidden) != 0) {
                 itemList.SetAllIsHidden(false);
                 UpdateUI_ItemList();
             }
         }
 
-        private void linkLabelButton_copyURL_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
+        void LinkLabelButton_copyURL_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
             Clipboard.SetText(searchList.currentSearch.GetURL());
         }
 
-        private void BtnUpdateItemsList_Click(object sender, EventArgs e) {
+        void BtnUpdateItemsList_Click(object sender, EventArgs e) {
             UpdateUI_ItemList();
         }
 
-        private void SettingsToolStripMenuItem_DropDownItemClicked(object sender, ToolStripItemClickedEventArgs e) {
-
-        }
-
-        private void SettingsToolStripMenuItem_Click(object sender, EventArgs e) {
+        void SettingsToolStripMenuItem_Click(object sender, EventArgs e) {
             groupBox1.Visible = !groupBox1.Visible;
             menuStrip1.Items[0].Text = groupBox1.Visible ? "Настройки(Скрыть)" : "Настройки(Показать)";
         }

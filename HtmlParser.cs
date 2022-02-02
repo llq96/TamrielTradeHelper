@@ -1,23 +1,13 @@
-﻿using DotNetBrowser.Browser;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Diagnostics;
-using System.Drawing;
-using System.Drawing.Imaging;
 using System.Globalization;
-using System.IO;
 using System.Linq;
-using System.Net;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using VladB.Utility;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
-using static TamrielTradeApp.HtmlParser;
 
 namespace TamrielTradeApp {
     class HtmlParser {
-        List<ItemInfo> allItems = new List<ItemInfo>();
+        List<ItemInfo> allItems = new();
 
         static string[] htmlQualities = new string[] {
                             "item-quality-normal",
@@ -28,13 +18,11 @@ namespace TamrielTradeApp {
                         };
 
         public List<ItemInfo> ParseHTML(string html) {
-            HtmlAgilityPack.HtmlDocument doc = new HtmlAgilityPack.HtmlDocument();
+            HtmlAgilityPack.HtmlDocument doc = new();
             doc.LoadHtml(html);
             HtmlDocumentProcessing(doc);
             return allItems;
         }
-
-        //public void 
 
         void HtmlDocumentProcessing(HtmlAgilityPack.HtmlDocument doc) {
             Debug.WriteLine("HtmlDocumentProcessing");
@@ -42,17 +30,13 @@ namespace TamrielTradeApp {
             //Debug.WriteLine(tables != null);
             if(table != null) {
                 var tbody = table.SelectSingleNode(".//tbody");
-
-                //Debug.WriteLine("QQQQ!" + tbody.InnerHtml);
+                //Debug.WriteLine("tbody.InnerHtml" + tbody.InnerHtml);
                 if(tbody != null) {
                     var items = table.SelectNodes(".//tr[@class='cursor-pointer']");
                     Debug.WriteLine("ITEMS_COUNT=" + items.Count);
                     foreach(var item in items) {
                         var tds = item.SelectNodes(".//td");
                         var itemName = tds[0].SelectSingleNode(".//div").InnerText;
-
-                        //var itemImageURL = "https://eu.tamrieltradecentre.com/" + itemImageHtmlPath;
-
 
                         var itemImageHtmlPath = tds[0].SelectSingleNode(".//img").Attributes["src"].Value;
                         var itemImageHtmlName = "";
@@ -65,12 +49,8 @@ namespace TamrielTradeApp {
                         }
 
 
-
-
                         var itemQualityStr = tds[0].SelectSingleNode(".//div").Attributes["class"].Value;
                         var itemQuality = GetQuality(itemQualityStr);
-                        //Debug.WriteLine(itemQualityStr);
-
 
                         var itemPlace = tds[2].SelectNodes(".//div")[0].InnerText;
                         var itemGuild = tds[2].SelectNodes(".//div")[1].InnerText;
@@ -85,9 +65,7 @@ namespace TamrielTradeApp {
                         var itemFullPriceStr = tds[3].SelectSingleNode(".//span[@data-bind='localizedNumber: TotalPrice']").InnerText;
                         float itemFullPrice = ConvertToFloat(itemFullPriceStr);
 
-                        //Debug.WriteLine($"PriceStr = {itemOnePriceStr} , Price = {itemOnePrice} ");
-
-                        if(itemName.IsHaveSomething() && itemPlace.IsHaveSomething()
+                        if(itemName.IsHaveSomething() && itemPlace.IsHaveSomething()//TODO
                             && itemGuild.IsHaveSomething() && itemTime.IsHaveSomething()
                             && itemOnePrice != 0 && itemCount != 0 && itemFullPrice != 0) {
                             var newItem = new ItemInfo() {
@@ -101,7 +79,6 @@ namespace TamrielTradeApp {
                                 count = itemCount,
                                 fullPrice = itemFullPrice,
                             };
-                            //newItem.UpdateTimeMinutes();
                             allItems.Add(newItem);
                         } else {
                             Debug.WriteLine($"Error,Data: {itemName}, {itemPlace}, {itemGuild}, {itemTime}, {itemOnePrice}, {itemCount}, {itemFullPrice}");

@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using VladB.Utility;
 
 namespace TamrielTradeApp {
     public class ItemList {
-        public List<ItemInfo> items = new List<ItemInfo>();
+        public List<ItemInfo> items = new();
         public void AddItems(List<ItemInfo> newItems) {
             newItems.Act(newItem => {
                 ItemInfo existedCopy = items.FirstOrDefault(item => item.IsEqual(newItem));

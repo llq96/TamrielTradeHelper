@@ -137,7 +137,7 @@ namespace TamrielTradeApp {
             this.linkLabelBtn_UnHideAll.TabStop = true;
             this.linkLabelBtn_UnHideAll.Text = "очистить список скрытого(0)";
             this.linkLabelBtn_UnHideAll.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.linkLabelBtn_UnHideAll.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelBtn_UnHideAll_LinkClicked);
+            this.linkLabelBtn_UnHideAll.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabelBtn_UnHideAll_LinkClicked);
             // 
             // linkLabelButton_copyURL
             // 
@@ -150,7 +150,7 @@ namespace TamrielTradeApp {
             this.linkLabelButton_copyURL.TabStop = true;
             this.linkLabelButton_copyURL.Text = "скопировать ссылку";
             this.linkLabelButton_copyURL.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.linkLabelButton_copyURL.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelButton_copyURL_LinkClicked);
+            this.linkLabelButton_copyURL.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabelButton_copyURL_LinkClicked);
             // 
             // panel1
             // 
@@ -378,7 +378,6 @@ namespace TamrielTradeApp {
             this.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem";
             this.SettingsToolStripMenuItem.Size = new System.Drawing.Size(128, 20);
             this.SettingsToolStripMenuItem.Text = "Настройки(Скрыть)";
-            this.SettingsToolStripMenuItem.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.SettingsToolStripMenuItem_DropDownItemClicked);
             this.SettingsToolStripMenuItem.Click += new System.EventHandler(this.SettingsToolStripMenuItem_Click);
             // 
             // Form1

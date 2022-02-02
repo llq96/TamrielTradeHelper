@@ -15,9 +15,7 @@ namespace TamrielTradeApp {
         public string guild;
         string __time;
         public string time {
-            get {
-                return __time;
-            }
+            get => __time;
             set {
                 __time = value;
                 UpdateTimeMinutes();
@@ -37,12 +35,9 @@ namespace TamrielTradeApp {
             set {
                 __imageHtmlName = value;
                 Task task = new Task(() => {
-                    //Debug.WriteLine("TASKTASKTASKTASKTASKTASK");
                     image = ItemImages.GetImage(__imageHtmlName);
-                    //Debug.WriteLine("ASKTASKTASKTASK");
                 });
                 task.Start();
-                //image = ItemImages.GetImage(__imageHtmlName);
             }
         }
         public Image image;

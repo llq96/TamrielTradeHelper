@@ -1,23 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using static TamrielTradeApp.LinkGenerator;
 
 namespace TamrielTradeApp {
     public class SearchList {
-        List<SearchInfo> searchQueries = new List<SearchInfo>();
+        List<SearchInfo> searchQueries = new();
         public SearchInfo currentSearch => searchQueries[currentSearchIndex];
         int currentSearchIndex = -1;
 
         public SearchList() {
-            //searchQueries.Add(new SearchInfo(
-            //        new BaseInfo("р", ItemQuality.Any),
-            //        new LevelInfo(true, LevelInfo.LevelType.ChampionPoints, 150, 150),
-            //        new AmountInfo(true, 1, 10),
-            //        new PriceInfo(true, 200, 500)
-            //));
             searchQueries.Add(new SearchInfo(
                 new BaseInfo("Карта сокровищ Мертвых Земель", ItemQuality.Any),
                 new LevelInfo(),
@@ -30,36 +22,6 @@ namespace TamrielTradeApp {
                 new AmountInfo(true , 2),
                 new PriceInfo(true, 0, 1400)
             ));
-            //searchQueries.Add(new SearchInfo(
-            //    new BaseInfo("Мотив 16", ItemQuality.Any),
-            //    new LevelInfo(),
-            //    new AmountInfo(),
-            //    new PriceInfo(true, 0, 3000)
-            //));
-            //searchQueries.Add(new SearchInfo(
-            //    new BaseInfo("Мотив 17", ItemQuality.Any),
-            //    new LevelInfo(),
-            //    new AmountInfo(),
-            //    new PriceInfo(true, 0, 3000)
-            //));
-            //searchQueries.Add(new SearchInfo(
-            //    new BaseInfo("Мотив 18", ItemQuality.Any),
-            //    new LevelInfo(),
-            //    new AmountInfo(),
-            //    new PriceInfo(true, 0, 3000)
-            //));
-            //searchQueries.Add(new SearchInfo(
-            //    new BaseInfo("Мотив 19", ItemQuality.Any),
-            //    new LevelInfo(),
-            //    new AmountInfo(),
-            //    new PriceInfo(true, 0, 3000)
-            //));
-            //searchQueries.Add(new SearchInfo(
-            //    new BaseInfo("Мотив 20", ItemQuality.Any),
-            //    new LevelInfo(),
-            //    new AmountInfo(),
-            //    new PriceInfo(true, 0, 3000)
-            //));
             searchQueries.Add(new SearchInfo(
                 new BaseInfo("Обычная руна", ItemQuality.Any),
                 new LevelInfo(),

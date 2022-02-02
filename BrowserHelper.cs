@@ -1,11 +1,6 @@
 ﻿using DotNetBrowser.Browser;
 using DotNetBrowser.Engine;
 using DotNetBrowser.WinForms;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TamrielTradeApp {
@@ -15,13 +10,11 @@ namespace TamrielTradeApp {
         public BrowserView browserView { get; private set; }
 
         public void Init() {
-            //Create the Windows Forms BrowserView control.
             browserView = new BrowserView {
                 Dock = DockStyle.Fill,
                 Padding = new Padding(5, 5, 5, 5)
             };
 
-            // Create and initialize the IEngine instance.
             EngineOptions engineOptions = new EngineOptions.Builder {
                 RenderingMode = RenderingMode.HardwareAccelerated,
                 UserDataDirectory = @"D:\VladsBrowserData",
@@ -29,7 +22,6 @@ namespace TamrielTradeApp {
             }.Build();
             engine = EngineFactory.Create(engineOptions);
 
-            // Create the IBrowser instance.
             browser = engine.CreateBrowser();
         }
 
