@@ -27,7 +27,7 @@ namespace TamrielTradeApp {
             searchQueries.Add(new SearchInfo(
                 new BaseInfo("Кута", ItemQuality.Q4_Legendary),
                 new LevelInfo(),
-                new AmountInfo(true , 1,2),
+                new AmountInfo(true , 2),
                 new PriceInfo(true, 0, 1400)
             ));
             //searchQueries.Add(new SearchInfo(
@@ -63,15 +63,15 @@ namespace TamrielTradeApp {
             searchQueries.Add(new SearchInfo(
                 new BaseInfo("Обычная руна", ItemQuality.Any),
                 new LevelInfo(),
-                new AmountInfo(true , 7),
-                new PriceInfo(true, 0, 150)
+                new AmountInfo(true , 10),
+                new PriceInfo(true, 0, 250)
             ));
 
             searchQueries.Add(new SearchInfo(
                 new BaseInfo("Дреугский воск", ItemQuality.Any),
                 new LevelInfo(),
                 new AmountInfo(),
-                new PriceInfo(true, 0, 13000)
+                new PriceInfo(true, 0, 14000)
             ));
 
             searchQueries.Add(new SearchInfo(
@@ -126,7 +126,7 @@ namespace TamrielTradeApp {
             searchQueries.Add(new SearchInfo(
                 new BaseInfo("Декоративный воск", ItemQuality.Any),
                 new LevelInfo(),
-                new AmountInfo(true, 4),
+                new AmountInfo(true, 10),
                 new PriceInfo(true, 0, 300)
             ));
 

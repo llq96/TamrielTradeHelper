@@ -13,9 +13,9 @@ namespace TamrielTradeApp {
             newItems.Act(newItem => {
                 ItemInfo existedCopy = items.FirstOrDefault(item => item.IsEqual(newItem));
                 if(existedCopy != null) {
+                    existedCopy.time = newItem.time;
                     if(existedCopy.timeMinutes > newItem.timeMinutes) {
                         //Debug.WriteLine($"Item Time Update From {existedCopy.time} To {newItem.time}");
-                        existedCopy.time = newItem.time;
                         existedCopy.isHidden = false;
                     }
                     //Debug.WriteLine("Item Was Not Added, Because Already Exist In The List");

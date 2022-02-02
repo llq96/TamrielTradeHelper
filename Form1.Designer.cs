@@ -88,8 +88,8 @@ namespace TamrielTradeApp {
             this.splitContainer1.Panel2.AutoScroll = true;
             this.splitContainer1.Panel2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.splitContainer1.Panel2MinSize = 20;
-            this.splitContainer1.Size = new System.Drawing.Size(754, 861);
-            this.splitContainer1.SplitterDistance = 714;
+            this.splitContainer1.Size = new System.Drawing.Size(701, 861);
+            this.splitContainer1.SplitterDistance = 643;
             this.splitContainer1.SplitterIncrement = 10;
             this.splitContainer1.SplitterWidth = 12;
             this.splitContainer1.TabIndex = 3;
@@ -107,7 +107,7 @@ namespace TamrielTradeApp {
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(714, 861);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(643, 861);
             this.tableLayoutPanel1.TabIndex = 10;
             // 
             // groupBox1
@@ -122,7 +122,7 @@ namespace TamrielTradeApp {
             this.groupBox1.Controls.Add(this.checkBox_IsHideOld);
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(708, 134);
+            this.groupBox1.Size = new System.Drawing.Size(637, 134);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             // 
@@ -159,7 +159,7 @@ namespace TamrielTradeApp {
             this.panel1.Controls.Add(this.text1);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(555, 85);
+            this.panel1.Location = new System.Drawing.Point(484, 90);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(153, 44);
             this.panel1.TabIndex = 7;
@@ -231,8 +231,6 @@ namespace TamrielTradeApp {
             // checkBox_IsHideOld
             // 
             this.checkBox_IsHideOld.AutoSize = true;
-            this.checkBox_IsHideOld.Checked = true;
-            this.checkBox_IsHideOld.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox_IsHideOld.Location = new System.Drawing.Point(3, 48);
             this.checkBox_IsHideOld.Name = "checkBox_IsHideOld";
             this.checkBox_IsHideOld.Size = new System.Drawing.Size(121, 19);
@@ -244,8 +242,6 @@ namespace TamrielTradeApp {
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -275,6 +271,7 @@ namespace TamrielTradeApp {
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 143);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -293,7 +290,7 @@ namespace TamrielTradeApp {
             this.dataGridView1.RowTemplate.Height = 50;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dataGridView1.ShowEditingIcon = false;
-            this.dataGridView1.Size = new System.Drawing.Size(708, 694);
+            this.dataGridView1.Size = new System.Drawing.Size(637, 694);
             this.dataGridView1.TabIndex = 0;
             // 
             // Image
@@ -372,7 +369,7 @@ namespace TamrielTradeApp {
             this.SettingsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(754, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(701, 24);
             this.menuStrip1.TabIndex = 9;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -389,7 +386,7 @@ namespace TamrielTradeApp {
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(754, 861);
+            this.ClientSize = new System.Drawing.Size(701, 861);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.splitContainer1);
             this.MainMenuStrip = this.menuStrip1;

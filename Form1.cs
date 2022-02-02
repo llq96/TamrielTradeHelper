@@ -67,12 +67,12 @@ namespace TamrielTradeApp {
 
         void ParseHTML(object sender, FrameLoadFinishedEventArgs e) {
             Debug.WriteLine($"Loaded");
-            Thread.Sleep(3200);
+            Thread.Sleep(4000);
             //ParseHTML();
             Invoke((Action)(() => ParseHTML()));
 
             browserHelper.browser.Navigation.Stop();
-            Thread.Sleep(1 * 1000);
+            Thread.Sleep(3 * 1000);
 
             Invoke((Action)(() => NextSearch()));
         }
