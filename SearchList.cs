@@ -36,45 +36,45 @@ namespace TamrielTradeApp {
                 new PriceInfo(true, 0, 14000)
             ));
 
-            searchQueries.Add(new SearchInfo(
-                new BaseInfo("Изысканная подкладка", ItemQuality.Any),
-                new LevelInfo(),
-                new AmountInfo(true, 12),
-                new PriceInfo(true, 0, 90)
-            ));
+            //searchQueries.Add(new SearchInfo(
+            //    new BaseInfo("Изысканная подкладка", ItemQuality.Any),
+            //    new LevelInfo(),
+            //    new AmountInfo(true, 12),
+            //    new PriceInfo(true, 0, 90)
+            //));
 
-            searchQueries.Add(new SearchInfo(
-                new BaseInfo("Луб", ItemQuality.Any),
-                new LevelInfo(),
-                new AmountInfo(true, 20),
-                new PriceInfo(true, 0, 25)
-            ));
+            //searchQueries.Add(new SearchInfo(
+            //    new BaseInfo("Луб", ItemQuality.Any),
+            //    new LevelInfo(),
+            //    new AmountInfo(true, 20),
+            //    new PriceInfo(true, 0, 25)
+            //));
 
-            searchQueries.Add(new SearchInfo(
-                new BaseInfo("Необработанный шелк предков", ItemQuality.Any),
-                new LevelInfo(),
-                new AmountInfo(true, 13),
-                new PriceInfo(true, 0, 70)
-            ));
+            //searchQueries.Add(new SearchInfo(
+            //    new BaseInfo("Необработанный шелк предков", ItemQuality.Any),
+            //    new LevelInfo(),
+            //    new AmountInfo(true, 13),
+            //    new PriceInfo(true, 0, 70)
+            //));
 
             searchQueries.Add(new SearchInfo(
                 new BaseInfo("Смола", ItemQuality.Q1_Fine),
                 new LevelInfo(),
-                new AmountInfo(true, 10),
+                new AmountInfo(true, 100),
                 new PriceInfo(true, 0, 100)
             ));
 
             searchQueries.Add(new SearchInfo(
                 new BaseInfo("Ядровая древесина", ItemQuality.Any),
                 new LevelInfo(),
-                new AmountInfo(true, 2),
-                new PriceInfo(true, 0, 900)
+                new AmountInfo(true, 5),
+                new PriceInfo(true, 0, 500)
             ));
 
             searchQueries.Add(new SearchInfo(
                 new BaseInfo("Платиновая пыль", ItemQuality.Any),
                 new LevelInfo(),
-                new AmountInfo(true, 7),
+                new AmountInfo(true, 50),
                 new PriceInfo(true, 0, 160)
             ));
 
@@ -88,7 +88,7 @@ namespace TamrielTradeApp {
             searchQueries.Add(new SearchInfo(
                 new BaseInfo("Декоративный воск", ItemQuality.Any),
                 new LevelInfo(),
-                new AmountInfo(true, 10),
+                new AmountInfo(true, 25),
                 new PriceInfo(true, 0, 300)
             ));
 

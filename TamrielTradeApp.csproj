@@ -14,28 +14,31 @@
 
   <ItemGroup>
     <Reference Include="DotNetBrowser">
-      <HintPath>D:\Library\DotNetBrowser.dll</HintPath>
+      <HintPath>..\..\..\.nuget\packages\dotnetbrowser\2.11.0\lib\net45\DotNetBrowser.dll</HintPath>
     </Reference>
     <Reference Include="DotNetBrowser.Chromium.Win-x64">
-      <HintPath>D:\Library\DotNetBrowser.Chromium.Win-x64.dll</HintPath>
+      <HintPath>..\..\..\Desktop\Library\DotNetBrowser.Chromium.Win-x64.dll</HintPath>
     </Reference>
     <Reference Include="DotNetBrowser.Chromium.Win-x86">
-      <HintPath>D:\Library\DotNetBrowser.Chromium.Win-x86.dll</HintPath>
+      <HintPath>..\..\..\Desktop\Library\DotNetBrowser.Chromium.Win-x86.dll</HintPath>
     </Reference>
     <Reference Include="DotNetBrowser.Core">
-      <HintPath>D:\Library\DotNetBrowser.Core.dll</HintPath>
+      <HintPath>..\..\..\.nuget\packages\dotnetbrowser\2.11.0\lib\net45\DotNetBrowser.Core.dll</HintPath>
     </Reference>
     <Reference Include="DotNetBrowser.Logging">
       <HintPath>..\..\..\.nuget\packages\dotnetbrowser\2.11.0\lib\net45\DotNetBrowser.Logging.dll</HintPath>
     </Reference>
     <Reference Include="DotNetBrowser.WinForms">
-      <HintPath>D:\Library\DotNetBrowser.WinForms.dll</HintPath>
+      <HintPath>..\..\..\Desktop\Library\DotNetBrowser.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetBrowser.Wpf">
+      <HintPath>..\..\..\Desktop\Library\DotNetBrowser.Wpf.dll</HintPath>
     </Reference>
     <Reference Include="protobuf-net">
-      <HintPath>D:\Library\protobuf-net.dll</HintPath>
+      <HintPath>..\..\..\Desktop\Library\protobuf-net.dll</HintPath>
     </Reference>
     <Reference Include="protobuf-net.Reflection">
-      <HintPath>D:\Library\protobuf-net.Reflection.dll</HintPath>
+      <HintPath>..\..\..\Desktop\Library\protobuf-net.Reflection.dll</HintPath>
     </Reference>
   </ItemGroup>
 

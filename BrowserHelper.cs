@@ -17,8 +17,8 @@ namespace TamrielTradeApp {
 
             EngineOptions engineOptions = new EngineOptions.Builder {
                 RenderingMode = RenderingMode.HardwareAccelerated,
-                UserDataDirectory = @"D:\VladsBrowserData",
-                LicenseKey = "1BNKDJZJSD5MAKB9FS6K7OFSPMDAL4K6AEKAX41BPBRR4K93KKISN14ZUZ80ASEHIPQL7O"
+                UserDataDirectory = @"E:\VladsBrowserData2",
+                LicenseKey = "1BNKDJZJSD5VJJ6NK6AD934GT2X3I8299ICGB9SZO8ALY6JCBCO64DB99V3W0N6Q3XGXU1"
             }.Build();
             engine = EngineFactory.Create(engineOptions);
 
